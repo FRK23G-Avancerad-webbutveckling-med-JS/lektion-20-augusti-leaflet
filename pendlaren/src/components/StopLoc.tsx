@@ -14,7 +14,7 @@ function StopLoc(props: StopLocProps) {
     const response =
       await fetch(`https://api.resrobot.se/v2.1/departureBoard?id=${
         stop.extId
-      }&maxJourneys=20&format=json&accessId=${import.meta.env.VITE_API_KEY}
+      }&duration=10&format=json&accessId=${import.meta.env.VITE_API_KEY}
 `);
     const { Departure } = await response.json();
     console.log(Departure);
